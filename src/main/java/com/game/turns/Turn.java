@@ -5,15 +5,15 @@ import com.game.coin.CoinsConsumed;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Turn {
+public class Turn {
     private String name;
      private int points;
      protected List<CoinsConsumed> coinsConsumed;
 
-    public Turn(String name, int points){
+    public Turn(String name, int points,List<CoinsConsumed> coinsConsumed){
         this.name=name;
         this.points=points;
-        this.coinsConsumed=new ArrayList<>();
+        this.coinsConsumed= coinsConsumed;
     }
 
     public int getPoints() {

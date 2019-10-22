@@ -23,12 +23,13 @@ public class GameOne implements Carrom {
         coins[0]=black;
         coins[1]=red;
 
-        Turn strike=new Strike();
-        Turn multiStrike=new MultiStrike();
-        Turn redStrike= new RedStrike();
-        Turn strikerStrike= new StrikerStrike();
-        Turn defunctCoin=new DefunctCoin();
-        Turn none=new None();
+        TurnsFactory turnsFactory=new TurnsFactory();
+        Turn strike=turnsFactory.getTurn("Strike");
+        Turn multiStrike=turnsFactory.getTurn("Multistrike");
+        Turn redStrike=turnsFactory.getTurn("Red strike");
+        Turn strikerStrike= turnsFactory.getTurn("Striker strike");
+        Turn defunctCoin=turnsFactory.getTurn("Defunct coin");
+        Turn none=turnsFactory.getTurn("None");
 
         Turn[] turns=new Turn[6];
         turns[0]=strike;
